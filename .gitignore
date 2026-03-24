@@ -1,41 +1,37 @@
-# Prerequisites
+# PlatformIO build artifacts
+.pio/
+.pioenvs/
+.piolibdeps/
+
+# PlatformIO IDE workspace
+.vscode/.browse.c_cpp.db*
+.vscode/c_cpp_properties.json
+.vscode/launch.json
+.vscode/ipch/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# macOS directory thumbnails
+._*
+
+# Thumbnails
+Thumbs.db
+
+# Compiled object files
+*.o
+*.a
+*.elf
+*.hex
+*.bin
+*.map
+
+# Dependency files
 *.d
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Linker files
-*.ilk
-
-# Debugger Files
-*.pdb
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
-
-# debug information files
-*.dwo
+# Editor swap/backup files
+*.swp
+*.swo
+*~
