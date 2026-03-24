@@ -1,6 +1,7 @@
 #include  <avr/io.h>
 #include <avr/interrupt.h>
 #include <util/delay.h>
+#include "uart.h"
 
 // This code is for a bare-metal UART communication on an AVR microcontroller (like the ATmega328P used in Arduino Uno)
 // Universal Asynchronous Receiver/Transmitter (UART) - a hardware communication interface that allows two devices to send and receive serial data without a clock signal
