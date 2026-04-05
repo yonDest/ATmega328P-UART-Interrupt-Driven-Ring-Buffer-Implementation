@@ -103,12 +103,14 @@ monitor_port = hwid://2341:0043
 
 ---
 
-## What a Production System Might Add
+## Production Considerations / Future Improvements
 
-- **Error detection** — framing errors, parity errors, overflow flags from `UCSR0A`
-- **Larger buffers** — necessary at higher baud rates (115200+)
-- **DMA transfer** — for very high throughput scenarios
-- **Flow control** — RTS/CTS hardware handshaking lines
+In a production environment, this system would need additional robustness and scalability:
+
+- **Error detection** — Framing errors, parity errors, overflow flags from `UCSR0A`. Currently, the implementation does not check UART status flags. A production version would monitor framing errors, parity errors, and overflow conditions to ensure data integrity.
+- **Larger buffers** — Necessary at higher baud rates (115200+). The current buffer works at lower baud rates, but higher speeds (e.g., 115200+) would require larger or circular buffers to prevent data loss.
+- **High-throughput optimization** — For significantly higher data rates, DMA-based transfers could reduce CPU overhead compared to interrupt-driven handling.
+- **Flow control** — RTS/CTS hardware handshaking lines. Hardware flow control could be added to prevent overruns when communicating with faster devices.
 
 ---
 
